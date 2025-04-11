@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: Outfit;
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-young-serif: "Young Serif", sans-serif;
+  --font-outfit: Outfit, sans-serif;
+}
+@layer base {
+  main {
+    @apply mb-6 min-h-[95vh] text-[hsl(14,45%,36%)] font-outfit;
+  }
+
+  h1 {
+    @apply text-[hsl(24,5%,18%)] font-young-serif ;
+  }
+
+  h2{
+    @apply font-young-serif
+  }
+
+
+  li > p{
+    @apply ml-5
+  }
+  strong{
+    @apply mr-1
+  }
+}
